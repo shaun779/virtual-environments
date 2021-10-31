@@ -11,6 +11,7 @@ echo "VCPKG_INSTALLATION_ROOT=${VCPKG_INSTALLATION_ROOT}" | tee -a /etc/environm
 # Install vcpkg
 git clone --depth=1 https://github.com/Microsoft/vcpkg $VCPKG_INSTALLATION_ROOT
 
+mkdir $VCPKG_INSTALLATION_ROOT/vcpkg
 $VCPKG_INSTALLATION_ROOT/bootstrap-vcpkg.sh
 $VCPKG_INSTALLATION_ROOT/vcpkg integrate install
 chmod 0777 -R $VCPKG_INSTALLATION_ROOT
